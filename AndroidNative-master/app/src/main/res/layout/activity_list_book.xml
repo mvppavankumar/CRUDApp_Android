@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:paddingTop="60dp"
+    android:background="#e6e5e3"
+    tools:context=".MainActivity">
+
+    <!-- Row 1: Book List, Search Input, 3 Dot Icon -->
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            android:padding="24dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#d8e8e9">
+
+        <TextView
+            android:id="@+id/textViewBookList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book List"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginStart="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textInputSearch"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundMode="none"
+                android:hint="Search"
+                android:background="@drawable/rounded_edittest_border"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editTextSearch"
+                    android:hint="Search"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+        android:id="@+id/imageViewOptions"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/thdot"
+            />
+
+    </LinearLayout>
+    <!-- Row 2: Buttons -->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row1"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonLast30Days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last 30 Days"
+            android:textColor="#000000"
+            android:backgroundTint="#ebeced"
+
+            android:layout_marginStart="16dp"
+            android:paddingHorizontal="10dp"
+            />
+
+        <Button
+            android:id="@+id/buttonFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:textColor="#000000"
+            android:backgroundTint="#ebeced"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/imageViewLast30Days"/>
+
+        <Button
+            android:id="@+id/buttonAddBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Book"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#3aaee8"
+
+        />
+    </LinearLayout>
+
+    <!-- book_list_item.xml -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/row2"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Add RecyclerView for the list of books here -->
+
+</RelativeLayout>
