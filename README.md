@@ -4,3 +4,4 @@ Step 2: Create tables using the SQL script crubhybridapp.sql
 Step 3: Start Backend native_node.js using the commands npm i and npm start.
 Step 4: Open the folder CRUDApp_Android in the android studio
 Step 5: Start the App Stimulation in the android studio
+
