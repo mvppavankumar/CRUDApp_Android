@@ -101,7 +101,7 @@ public ImageButton editButton;
     private void deleteBook(int bookId, int adapterPosition) {
         // Use the 'context' variable here
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.100.122:3301/") // Replace with your server URL
+                .baseUrl("http://192.168.0.37:3301/") // Replace with your server URL
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
